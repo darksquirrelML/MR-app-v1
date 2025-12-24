@@ -4,6 +4,8 @@
 # In[ ]:
 
 
+######### Download as CSV ##################
+
 import streamlit as st
 import pandas as pd
 import os
@@ -84,44 +86,47 @@ with st.form("order_form"):
     # Submit order
     # -------------------------
     submitted = st.form_submit_button("✅ Generate Order File")
-    if submitted:
-        if not ordered_by or not project_code:
-            st.warning("Please enter both Ordered By and Project Code.")
-        elif not order_list:
-            st.warning("No material selected.")
-        else:
-            # Prepare order DataFrame
-            order_df = pd.DataFrame(order_list)
-            order_df["ordered_by"] = ordered_by
-            order_df["project_code"] = project_code
-            order_df["category"] = category
-            order_df["time"] = datetime.now().strftime("%Y-%m-%d %H:%M")
+    
+        
+    
+if submitted:
+    if not ordered_by or not project_code:
+        st.warning("Please enter both Ordered By and Project Code.")
+    elif not order_list:
+        st.warning("No material selected.")
+    else:
+        # Prepare order DataFrame
+        order_df = pd.DataFrame(order_list)
+        order_df["ordered_by"] = ordered_by
+        order_df["project_code"] = project_code
+        order_df["category"] = category
+        order_df["time"] = datetime.now().strftime("%Y-%m-%d %H:%M")
 
-            # -------------------------
-            # Download as CSV
-            # -------------------------
-            csv_data = order_df.to_csv(index=False).encode('utf-8')
-            st.download_button(
-                label="📥 Download Order as CSV",
-                data=csv_data,
-                file_name=f"material_order_{datetime.now().strftime('%Y%m%d_%H%M')}.csv",
-                mime="text/csv"
-            )
+        # -------------------------
+        # Download as CSV
+        # -------------------------
+        csv_data = order_df.to_csv(index=False).encode('utf-8')
+        st.download_button(
+            label="📥 Download Order as CSV",
+            data=csv_data,
+            file_name=f"material_order_{datetime.now().strftime('%Y%m%d_%H%M')}.csv",
+            mime="text/csv"
+        )
 
-            # -------------------------
-            # Download as Excel
-            # -------------------------
-            output = BytesIO()
-            with pd.ExcelWriter(output, engine="xlsxwriter") as writer:
-                order_df.to_excel(writer, index=False, sheet_name="Order")
-            excel_data = output.getvalue()
+        # -------------------------
+        # Download as Excel
+        # -------------------------
+        output = BytesIO()
+        with pd.ExcelWriter(output, engine="xlsxwriter") as writer:
+            order_df.to_excel(writer, index=False, sheet_name="Order")
+        excel_data = output.getvalue()
 
-            st.download_button(
-                label="📥 Download Order as Excel",
-                data=excel_data,
-                file_name=f"material_order_{datetime.now().strftime('%Y%m%d_%H%M')}.xlsx",
-                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-            )
+        st.download_button(
+            label="📥 Download Order as Excel",
+            data=excel_data,
+            file_name=f"material_order_{datetime.now().strftime('%Y%m%d_%H%M')}.xlsx",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        )
 
-            st.success("Order file ready for download 👍")
+        st.success("Order file ready for download 👍")
 
