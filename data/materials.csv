@@ -1,0 +1,21 @@
+category,code,name,unit,image
+Lightning Protection,LPS-01,Aluminium Tape,m,alu_tape.jpg
+Lightning Protection,LPS-02,Copper Tape,m,cu_tape.jpg
+Lightning Protection,LPS-03,Aluminium saddle,pcs,alu_saddle.jpg
+Lightning Protection,LPS-04,Brass Saddle,pcs,brass_saddle.jpg
+Lightning Protection,LPS-05,Aluminium Square Tape Clamp,pcs,alu_sq_tape_clamp.jpg
+Lightning Protection,LPS-06,Brass Square Tape Clamp,pcs,brass_sq_tape_clamp.jpg
+Lightning Protection,LPS-07,Copper Rod,pcs,cu_rod.jpg
+Lightning Protection,LPS-08,Bi Metallic Connector,pcs,bi_metallic_connector.jpg
+Lightning Protection,LPS-09,Galvanised Lid Earth Pit,pcs,gal_lid_earth_pit.jpg
+Lightning Protection,LPS-10,Polymer Earth Pit ,pcs,polymer_earth_pit.jpg
+Lightning Protection,LPS-11,Aluminium Air Terminal,pcs,alu_air_ter.jpg
+Lightning Protection,LPS-12,Copper Air Terminal,pcs,cu_air_ter.jpg
+Lightning Protection,LPS-13,Round Test Clamp,pcs,rd_test_clp.jpg
+Lightning Protection,LPS-14,Rod to Cable Clamp,pcs,rod_to_cab.jpg
+Lightning Protection,LPS-15,Rod to Tape Clamp,pcs,rod_to_tape.jpg
+Lightning Protection,LPS-16,Test Link Box,pcs,test_link_bx.jpg
+Lightning Protection,LPS-17,Aluminium B Bond,pcs,alu_b_bond.jpg
+Lightning Protection,LPS-18,Copper B Bond,pcs,cu_b_bond.jpg
+Lightning Protection,LPS-19,Earth Bar,pcs,earth_bar.jpg
+Lightning Protection,LPS-20,Pipe Clip,pcs,pipe_clip.jpg

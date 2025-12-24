@@ -1,0 +1,11 @@
+code,name,quantity,unit,ordered_by,project_code,time
+LPS-01,Air Terminal,1,pcs,mannor,sadt,2025-12-23 15:42
+LPS-02,Copper Tape 25x3mm,1,m,mannor,sadt,2025-12-23 15:42
+LPS-03,Test Clamp,1,pcs,mannor,sadt,2025-12-23 15:42
+LPS-01,Aluminium Tape,1,m,Chong,P212,2025-12-23 17:26
+LPS-02,Copper Tape,2,m,Chong,P212,2025-12-23 17:26
+LPS-05,Aluminium Square Tape Clamp,2,pcs,Chong,P212,2025-12-23 17:26
+LPS-07,Copper Rod,2,pcs,Chong,P212,2025-12-23 17:26
+LPS-09,Galvanised Lid Earth Pit,1,pcs,Chong,P212,2025-12-23 17:26
+LPS-01,Aluminium Tape,1,m,Tay,P202,2025-12-23 17:32
+LPS-02,Copper Tape,1,m,Tay,P202,2025-12-23 17:32
