@@ -103,13 +103,23 @@ if submitted:
         # -------------------------
         # CSV download
         # -------------------------
-        csv_data = order_df.to_csv(index=False).encode('utf-8')
+#         csv_data = order_df.to_csv(index=False).encode('utf-8')
+#         st.download_button(
+#             label="📥 Download Order as CSV",
+#             data=csv_data,
+#             file_name=f"material_order_{datetime.now().strftime('%Y%m%d_%H%M')}.csv",
+#             mime="text/csv"
+#         )
+
+        txt_data = order_df.to_string(index=False).encode("utf-8")
         st.download_button(
-            label="📥 Download Order as CSV",
-            data=csv_data,
-            file_name=f"material_order_{datetime.now().strftime('%Y%m%d_%H%M')}.csv",
-            mime="text/csv"
+            label="📥 Download Order as TXT",
+            data=txt_data,
+            file_name="material_order.txt",
+            mime="text/plain"
         )
+
+
 
         # -------------------------
         # Excel download using openpyxl
